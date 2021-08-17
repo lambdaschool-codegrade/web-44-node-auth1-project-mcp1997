@@ -40,7 +40,10 @@ router.post('/register', checkUsernameFree, checkPasswordLength, (req, res, next
   
   Users.add(user)
     .then(newUser => {
-      console.log(newUser)
+      res.status(201).json({
+        user_id: newUser.user_id,
+        username: newUser.username
+      })
     })
     .catch(next)
 })

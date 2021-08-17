@@ -26,7 +26,7 @@ server.use(express.json());
 server.use(cors());
 
 server.use(session({
-  name: 'dapper',
+  name: 'chocolatechip',
   secret: 'make it long and random',
   cookie: {
     maxAge: 1000 * 60 * 60,
